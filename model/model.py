@@ -22,8 +22,10 @@ class Model:
         """Restituisce la lista di tutte le epoche."""
         # TODO
 
+
     # --- MUSEI ---
     def get_musei(self):
         """ Restituisce la lista di tutti i musei."""
         # TODO
-
+        lista_musei = self._museo_dao.read_all_museums()
+        return lista_musei
