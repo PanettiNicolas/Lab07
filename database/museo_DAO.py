@@ -12,17 +12,17 @@ class MuseoDAO:
 
     # TODO
     @staticmethod
-    def read_all_museums():
+    def read_all_museums():                      #Legge tutti i musei dalla tabella museo
         print("Executing get_museo()")
         results = []
 
-        cnx = ConnessioneDB().get_connection()
+        cnx = ConnessioneDB.get_connection()
 
         if cnx is None:
             print("No database connected")
             return None
         else:
-            cursor = cnx.cursor(type=dict)
+            cursor = cnx.cursor(dictionary=True)
             query = """SELECT *
                     FROM museo"""
 
